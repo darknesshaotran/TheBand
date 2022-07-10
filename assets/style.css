@@ -140,8 +140,9 @@
 }
 #content .section
 { 
-    padding: 40px 0;
+    padding: 64px 16px 112px;
     width: 800px;
+    max-width:100%;
     margin-left:auto;
     margin-right: auto; 
 }
