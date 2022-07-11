@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>the Band</title>
         <link rel="icon" href="assets/img/logo.webp" type="image/x-icon" />
-        <link rel="stylesheet" href="assets/style.css">
+        <link rel="stylesheet" href="assets/style.css"> 
+        <link rel="stylesheet" href="assets/responsive.css">
         <link rel="stylesheet" href="assets/themify-icons-font/themify-icons/themify-icons.css">
         
 
@@ -20,7 +21,7 @@
                     <li><a href="#Tour">TOUR</a></li>
                     <li><a href="#Contact">CONTACT</a></li>
                     <li>
-                        <a href="">
+                        <a href="#">
                             MORE
                             <i class="iconHeader ti-angle-down">
 
@@ -36,13 +37,15 @@
                 <div class="search">
                     <i class=" searchIcon ti-search"></i>
                 </div>
+                <div id="mobile-menu" class="sidebar">
+                    <i class="sidebarIcon ti-menu"></i>
+                </div>
             </div>
             <!-- slider -->
             <div id="slider">
                <div class="text-content">
                     <div class="text-heading">New York</div>
                     <h4 class="description">Thank you, Chicago - A night we won't forget.</h4>
-
                </div>
             </div>
             <!-- content -->
@@ -200,11 +203,12 @@
                 </div>
 
                 <footer class="modal-footer">
-                    <p class="modal-help">Need <a href="https://vlxx.sex/">help?</a> </p>
+                    <p class="modal-help">Need <a href="http://cb.dut.udn.vn/ImageSV/20/102200302.jpg">help?</a> </p>
                 </footer>
             </div>
         </div>
         <script>
+            // FORM BUY TICKET //
             const buyBtns = document.querySelectorAll('.js-buy-ticket');
             const modal = document.querySelector('.modal');
             const modal_close = document.querySelector('.modal-close');
@@ -231,6 +235,43 @@
             {
                 event.stopPropagation();
             }   )
+            
+            // OPEN/HIDE HEADER IN MOBILE
+            const header = document.getElementById('header');
+            const mobile_menu = document.getElementById('mobile-menu');
+            const currentHeight = header.clientHeight;
+            mobile_menu.onclick = function()
+            {
+                var isClosed = header.clientHeight === currentHeight;
+                if(isClosed)
+                {
+                    header.style.height = 'auto';
+                }
+                else
+                {
+                    header.style.height = null;
+                }
+            }
+
+            // AUTOMATICALLY HIDE SIDEBAR WHEN CLICK 
+            
+                const menuItems = document.querySelectorAll('#header #nav li a[href*="#"]')
+                for(const menuItem of menuItems)
+                {
+                    menuItem.onclick = function(event)
+                    {
+                        if(!(menuItem.nextElementSibling && menuItem.nextElementSibling.classList.contains('Sub-nav')))
+                        {
+                            header.style.height = null;
+                        }
+                        else
+                        {
+                            event.preventDefault();
+                        }
+                        
+                    }
+                }
+            
 
         </script>
     </body>

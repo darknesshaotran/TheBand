@@ -1,0 +1,110 @@
+/* PC */
+@media (min-width:1024px)
+{
+
+}
+/* TABLET */
+@media(min-width:740px) and (max-width:1023px)
+{
+
+}
+/* MOBILE */
+@media(max-width:740px)
+{
+    #header
+    {
+        overflow: hidden;
+    }
+    #nav
+    {
+        display: block;
+    }
+    #nav > li
+    {
+        display: block;
+    }
+    #nav > li:first-child
+    {
+        display: inline-block;
+    }
+    #nav .Sub-nav
+    {
+        position:initial;
+        background-color: #333;
+        width: 100%;
+    }
+    #nav .Sub-nav li
+    {
+        border-bottom: 0.5px solid #ccc;
+        padding: 5px 30px;
+    }
+    #nav .Sub-nav li a 
+    {
+        color: white;
+    }
+    #nav .Sub-nav li:hover a
+    {
+        color:black;
+    }
+    #header .searchIcon
+    {
+        display: none;
+    }
+    #header .sidebarIcon
+    {
+        display: inline;
+    }
+    #slider .text-content
+    {
+        bottom: 0;
+        font-size: 8px;
+    }
+    #content .member .memberItem
+    {
+        margin-top: 20px;
+        width: 100%;
+    }
+    #content .member .memberItem img
+    {
+        width: 60%;
+    }
+    #content .place-list .place-item
+    {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    #content .place-list:last-child
+    {
+        margin-bottom: -70px;
+    }
+    
+    #content .place-buy-btn
+    {
+        width: 100%;
+        padding: 16px;
+    }
+    .contact .col-half
+    {
+        width: 100%;
+    }
+    .contact .info-contact
+    {
+        margin-bottom: 20px;
+    }
+    .img-section
+    {
+        margin-top: -100px;
+    }
+    #Contact
+    {
+        margin-top: -50px;
+    }
+    #Tour
+    {
+        margin-top: 130px;
+    }
+    #Band
+    {
+        margin-top: -50px;
+    }
+}
